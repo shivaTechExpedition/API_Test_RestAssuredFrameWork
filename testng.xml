@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="GithubAPITestSuite">
+<Listeners><Listener class-name="com.github.listeners.GithubListeners"></Listener></Listeners>
+  <test name="CRUD_Test">
+    <classes>
+      <class name="com.github.testcases.GitHubAPITest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

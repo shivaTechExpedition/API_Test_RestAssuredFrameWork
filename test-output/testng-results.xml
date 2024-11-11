@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="8" passed="6" failed="1" skipped="1">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-10T23:38:52 PST" name="Default suite" finished-at="2024-11-10T23:39:03 PST" duration-ms="11134">
+    <groups>
+    </groups>
+    <test started-at="2024-11-10T23:38:52 PST" name="Default test" finished-at="2024-11-10T23:39:03 PST" duration-ms="11134">
+      <class name="com.github.testcases.GitHubAPITest">
+        <test-method is-config="true" signature="beforeSuiteSetUp()[pri:0, instance:com.github.testcases.GitHubAPITest@43bc63a3]" started-at="2024-11-10T23:38:51 PST" name="beforeSuiteSetUp" finished-at="2024-11-10T23:38:52 PST" duration-ms="190" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuiteSetUp -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:com.github.testcases.GitHubAPITest@43bc63a3]" started-at="2024-11-10T23:38:52 PST" name="beforeClass" finished-at="2024-11-10T23:38:53 PST" duration-ms="818" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="test_creatingRepoWithExistingName()[pri:0, instance:com.github.testcases.GitHubAPITest@43bc63a3]" started-at="2024-11-10T23:38:53 PST" name="test_creatingRepoWithExistingName" description="TestCase 5: POST Method: Negative TestCase : create a repository with an existing repository name" finished-at="2024-11-10T23:38:58 PST" duration-ms="5258" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_creatingRepoWithExistingName -->
+        <test-method signature="test_deleteNonExistingRepo()[pri:0, instance:com.github.testcases.GitHubAPITest@43bc63a3]" started-at="2024-11-10T23:38:58 PST" name="test_deleteNonExistingRepo" description="TestCase 8 : DELETE Method: Negative testcase : Delete a non exisitng repository" finished-at="2024-11-10T23:38:59 PST" duration-ms="619" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_deleteNonExistingRepo -->
+        <test-method signature="test_getAllRepositories()[pri:0, instance:com.github.testcases.GitHubAPITest@43bc63a3]" started-at="2024-11-10T23:38:59 PST" name="test_getAllRepositories" description="TestCase 3 : Get Method: Get all the repositories" finished-at="2024-11-10T23:39:00 PST" duration-ms="810" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_getAllRepositories -->
+        <test-method signature="test_getNonExistingRespository()[pri:0, instance:com.github.testcases.GitHubAPITest@43bc63a3]" started-at="2024-11-10T23:39:00 PST" name="test_getNonExistingRespository" description="TestCase 2: Get Method: Negative TestCase : get a non existing repository" finished-at="2024-11-10T23:39:00 PST" duration-ms="340" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_getNonExistingRespository -->
+        <test-method signature="test_getSingleRepository()[pri:0, instance:com.github.testcases.GitHubAPITest@43bc63a3]" started-at="2024-11-10T23:39:00 PST" name="test_getSingleRepository" description="TestCase 1 : GET Method : get single Repository" finished-at="2024-11-10T23:39:01 PST" duration-ms="593" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_getSingleRepository -->
+        <test-method signature="test_creatingRepository()[pri:1, instance:com.github.testcases.GitHubAPITest@43bc63a3]" started-at="2024-11-10T23:39:01 PST" name="test_creatingRepository" description="TestCase 4: POST method : create a repsoitory" finished-at="2024-11-10T23:39:02 PST" duration-ms="1180" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_creatingRepository -->
+        <test-method signature="test_updateRepository()[pri:2, instance:com.github.testcases.GitHubAPITest@43bc63a3]" started-at="2024-11-10T23:39:02 PST" name="test_updateRepository" description="TestCase 6 : PATCH Method : update an existing repository" finished-at="2024-11-10T23:39:03 PST" depends-on-methods="com.github.testcases.GitHubAPITest.test_creatingRepository" duration-ms="690" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Status mismatch expected [200] but found [422]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Status mismatch expected [200] but found [422]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:1419)
+at org.testng.Assert.assertEquals(Assert.java:1383)
+at com.github.testcases.GitHubAPITest.test_updateRepository(GitHubAPITest.java:178)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_updateRepository -->
+        <test-method signature="test_deleteRepo()[pri:3, instance:com.github.testcases.GitHubAPITest@43bc63a3]" started-at="2024-11-10T23:39:03 PST" name="test_deleteRepo" description="TestCase 7: DELETE Method : delete a repository" finished-at="2024-11-10T23:39:03 PST" depends-on-methods="com.github.testcases.GitHubAPITest.test_updateRepository, com.github.testcases.GitHubAPITest.test_creatingRepository" duration-ms="0" status="SKIP">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method com.github.testcases.GitHubAPITest.test_deleteRepo() on instance com.github.testcases.GitHubAPITest@43bc63a3 depends on not successfully finished methods 
+[com.github.testcases.GitHubAPITest.test_updateRepository() on instance com.github.testcases.GitHubAPITest@43bc63a3
+com.github.testcases.GitHubAPITest.test_creatingRepository() on instance com.github.testcases.GitHubAPITest@43bc63a3]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method com.github.testcases.GitHubAPITest.test_deleteRepo() on instance com.github.testcases.GitHubAPITest@43bc63a3 depends on not successfully finished methods 
+[com.github.testcases.GitHubAPITest.test_updateRepository() on instance com.github.testcases.GitHubAPITest@43bc63a3
+com.github.testcases.GitHubAPITest.test_creatingRepository() on instance com.github.testcases.GitHubAPITest@43bc63a3]
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_deleteRepo -->
+      </class> <!-- com.github.testcases.GitHubAPITest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
